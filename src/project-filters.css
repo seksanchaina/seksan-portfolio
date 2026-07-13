@@ -1,0 +1,4 @@
+.project-filters { display: flex; flex-wrap: wrap; gap: .55rem; margin: 1.4rem 0 1.25rem; }
+.project-filters button { padding: .55rem .85rem; border: 1px solid var(--line); background: #fff; color: #475569; font: inherit; font-size: .76rem; font-weight: 800; cursor: pointer; }
+.project-filters button:hover, .project-filters button.active { border-color: var(--blue); background: var(--blue); color: #fff; }
+.project-filters button:focus-visible { outline: 3px solid #f2c811; outline-offset: 2px; }

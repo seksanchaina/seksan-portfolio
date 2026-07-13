@@ -6,10 +6,14 @@ import ProjectModal from "./components/ProjectModal";
 import Footer from "./components/Footer";
 import { projects, tools } from "./data/projects";
 import "./contact.css";
+import "./project-filters.css";
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
+  const [activeFilter, setActiveFilter] = useState("All");
+  const projectFilters = ["All", "Dashboards", "Data workflow", "Automation"];
+  const filteredProjects = activeFilter === "All" ? projects : projects.filter((project) => project.category === activeFilter);
 
   return (
     <>
@@ -31,8 +35,13 @@ export default function App() {
         <section className="work section" id="work">
           <p className="eyebrow">02 / Solutions</p>
           <h2>Projects that connect data with daily decisions.</h2>
+          <div className="project-filters" aria-label="Filter solutions by type">
+            {projectFilters.map((filter) => (
+              <button key={filter} className={activeFilter === filter ? "active" : ""} onClick={() => setActiveFilter(filter)} aria-pressed={activeFilter === filter}>{filter}</button>
+            ))}
+          </div>
           <div className="project-grid">
-            {projects.map((project) => <ProjectCard key={project.id} project={project} onSelect={setSelectedProject} />)}
+            {filteredProjects.map((project) => <ProjectCard key={project.id} project={project} onSelect={setSelectedProject} />)}
           </div>
         </section>
 
