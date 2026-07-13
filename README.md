@@ -11,8 +11,8 @@
 1. สร้าง repository ใหม่บน GitHub ชื่อ `portfolio-website`
 2. เพิ่ม remote URL ของ repository แล้ว push branch `main`
 3. เปิด GitHub repository → **Settings** → **Pages**
-4. เลือก **Deploy from a branch**, branch `main` และ folder `/(root)`
-5. กด Save แล้วรอ GitHub สร้าง URL ของเว็บไซต์
+4. เลือก **GitHub Actions** เป็น Source
+5. ทุกครั้งที่ push ไป branch `main` GitHub จะ build และ deploy เว็บไซต์อัตโนมัติ
 
 ## แก้ไขข้อมูล
 
