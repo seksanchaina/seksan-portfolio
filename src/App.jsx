@@ -9,18 +9,37 @@ import "./contact.css";
 import "./dashboard.css";
 import "./project-filters.css";
 
-const dashboardPreviews = [
-  { id: "overview", label: "01 / Overview", title: "Monthly performance overview", image: `${import.meta.env.BASE_URL}assets/dashboards/consumption-dashboard-01.png`, alt: "Electricity Consumption Dashboard overview with consumption, cost, and CO2 metrics" },
-  { id: "machine", label: "02 / Machines", title: "Machine energy performance", image: `${import.meta.env.BASE_URL}assets/dashboards/consumption-dashboard-02.png`, alt: "Electricity Consumption Dashboard with machine performance charts" },
-  { id: "preheat", label: "04 / Preheat", title: "Preheat consumption monitoring", image: `${import.meta.env.BASE_URL}assets/dashboards/consumption-dashboard-04.png`, alt: "Electricity Consumption Dashboard with preheat comparison and monitoring charts" },
-  { id: "daily", label: "05 / Daily detail", title: "Daily consumption analysis", image: `${import.meta.env.BASE_URL}assets/dashboards/consumption-dashboard-05.png`, alt: "Electricity Consumption Dashboard with daily consumption and shift analysis" },
+const dashboardProjects = [
+  {
+    id: "electricity",
+    label: "Electricity",
+    title: "Electricity Consumption Dashboard",
+    previews: [
+      { id: "overview", number: "01", label: "Overview", title: "Monthly performance overview", image: `${import.meta.env.BASE_URL}assets/dashboards/consumption-dashboard-01.png`, alt: "Electricity Consumption Dashboard overview with consumption, cost, and CO2 metrics" },
+      { id: "machine", number: "02", label: "Machines", title: "Machine energy performance", image: `${import.meta.env.BASE_URL}assets/dashboards/consumption-dashboard-02.png`, alt: "Electricity Consumption Dashboard with machine performance charts" },
+      { id: "preheat", number: "04", label: "Preheat", title: "Preheat consumption monitoring", image: `${import.meta.env.BASE_URL}assets/dashboards/consumption-dashboard-04.png`, alt: "Electricity Consumption Dashboard with preheat comparison and monitoring charts" },
+      { id: "daily", number: "05", label: "Daily detail", title: "Daily consumption analysis", image: `${import.meta.env.BASE_URL}assets/dashboards/consumption-dashboard-05.png`, alt: "Electricity Consumption Dashboard with daily consumption and shift analysis" },
+    ],
+  },
+  {
+    id: "gas",
+    label: "Gas",
+    title: "Gas Consumption Dashboard",
+    previews: [
+      { id: "overview", number: "01", label: "Overview", title: "Monthly gas performance overview", image: `${import.meta.env.BASE_URL}assets/dashboards/gas/gas-dashboard-01.png`, alt: "Gas Consumption Dashboard overview with consumption, cost, and productivity metrics" },
+      { id: "daily", number: "02", label: "Daily usage", title: "Daily consumption and preheat monitoring", image: `${import.meta.env.BASE_URL}assets/dashboards/gas/gas-dashboard-02.png`, alt: "Gas Consumption Dashboard with daily gas usage and preheat monitoring" },
+      { id: "analysis", number: "03", label: "Analysis", title: "Usage versus target analysis", image: `${import.meta.env.BASE_URL}assets/dashboards/gas/gas-dashboard-03.png`, alt: "Gas Consumption Dashboard with estimate, actual, and target analysis" },
+      { id: "target", number: "04", label: "Targets", title: "Output and working-hour targets", image: `${import.meta.env.BASE_URL}assets/dashboards/gas/gas-dashboard-04.png`, alt: "Gas Consumption Dashboard with output and working-hour targets" },
+    ],
+  },
 ];
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
   const [activeFilter, setActiveFilter] = useState("All");
-  const [activeDashboard, setActiveDashboard] = useState(dashboardPreviews[0]);
+  const [activeDashboardProject, setActiveDashboardProject] = useState(dashboardProjects[0]);
+  const [activeDashboard, setActiveDashboard] = useState(dashboardProjects[0].previews[0]);
   const projectFilters = ["All", "Dashboards", "Data workflow", "Automation"];
   const filteredProjects = activeFilter === "All" ? projects : projects.filter((project) => project.category === activeFilter);
 
@@ -58,17 +77,30 @@ export default function App() {
           <div className="dashboard-heading">
             <div>
               <p className="eyebrow">03 / Dashboard gallery</p>
-              <h2>Electricity consumption, made actionable.</h2>
+              <h2>Utilities data, made actionable.</h2>
             </div>
-            <p>A static case-study preview of the Electricity Consumption Dashboard, created to make energy trends and production performance easier to understand.</p>
+            <p>Static case-study previews of Electricity and Gas Consumption Dashboards, designed to make energy use, targets, and production performance easier to understand.</p>
+          </div>
+          <div className="dashboard-projects" aria-label="Select dashboard project">
+            {dashboardProjects.map((project) => (
+              <button
+                key={project.id}
+                type="button"
+                className={activeDashboardProject.id === project.id ? "active" : ""}
+                onClick={() => { setActiveDashboardProject(project); setActiveDashboard(project.previews[0]); }}
+                aria-pressed={activeDashboardProject.id === project.id}
+              >
+                {project.label} <span>Dashboard</span>
+              </button>
+            ))}
           </div>
           <div className="dashboard-gallery">
             <figure className="dashboard-stage">
               <img src={activeDashboard.image} alt={activeDashboard.alt} />
-              <figcaption>{activeDashboard.title}</figcaption>
+              <figcaption>{activeDashboardProject.title} / {activeDashboard.title}</figcaption>
             </figure>
             <div className="dashboard-controls" aria-label="Select dashboard preview">
-              {dashboardPreviews.map((preview) => (
+              {activeDashboardProject.previews.map((preview) => (
                 <button
                   key={preview.id}
                   type="button"
@@ -76,7 +108,8 @@ export default function App() {
                   onClick={() => setActiveDashboard(preview)}
                   aria-pressed={activeDashboard.id === preview.id}
                 >
-                  {preview.label}
+                  <span>{preview.number}</span>
+                  <strong>{preview.label}</strong>
                 </button>
               ))}
             </div>

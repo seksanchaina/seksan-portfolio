@@ -24,8 +24,20 @@ export const projects = [
     impact: "Clearer energy-use conversations across production and sustainability teams."
   },
   {
-    id: "monitoring",
+    id: "gas",
     number: "03",
+    tone: "dark",
+    category: "Dashboards",
+    tag: "Energy / Production Monitoring",
+    title: "Gas Consumption Dashboard",
+    summary: "A clear view of gas usage, cost, targets, preheat time, and production output.",
+    challenge: "Connect gas consumption with production context so teams can respond to gaps faster.",
+    details: ["Mapped consumption, cost, and output measures into one dashboard", "Created daily monitoring views for usage and preheat time", "Designed target-versus-actual views for operational follow-up"],
+    impact: "Faster visibility of gas-use performance and improvement opportunities."
+  },
+  {
+    id: "monitoring",
+    number: "04",
     tone: "pale",
     category: "Dashboards",
     tag: "Production Monitoring",
@@ -37,7 +49,7 @@ export const projects = [
   },
   {
     id: "etl",
-    number: "04",
+    number: "05",
     tone: "pale",
     category: "Data workflow",
     tag: "Power Query / Data Pipeline",
@@ -49,7 +61,7 @@ export const projects = [
   },
   {
     id: "asakai",
-    number: "05",
+    number: "06",
     tone: "dark",
     category: "Automation",
     tag: "Presentation Automation",
@@ -61,7 +73,7 @@ export const projects = [
   },
   {
     id: "vba",
-    number: "06",
+    number: "07",
     tone: "lime",
     category: "Automation",
     tag: "Excel VBA / Reporting",

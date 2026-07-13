@@ -5,8 +5,8 @@ export default function Hero() {
 
   return (
     <section className="hero" id="home">
-      <p className="eyebrow">Manufacturing Data Analyst · Power BI Developer</p>
-      <h1><span>Smarter data.</span><em>Stronger production.</em></h1>
+      <p className="eyebrow">Production Improvement &amp; Digitalization Professional</p>
+      <h1><span>Turning data into</span><em>operational impact.</em></h1>
 
       <div className="hero-intro">
         <figure className="profile-photo">
@@ -15,19 +15,19 @@ export default function Hero() {
         <div className="hero-profile-copy">
           <p className="profile-name">Seksan Chaina</p>
           <p className="profile-location">Rayong, Thailand</p>
-          <p className="hero-copy">I turn process improvement and operational data into Power BI dashboards that help teams act faster.</p>
+          <p className="hero-copy">I improve production processes by turning operational data into clearer, faster daily decisions.</p>
         </div>
       </div>
 
       <div className="hero-actions">
-        <a className="button primary" href="#work">Explore my work <span aria-hidden="true">→</span></a>
-        <a className="button secondary" href="mailto:seksan.chaina@gmail.com">Email me <span aria-hidden="true">↗</span></a>
+        <a className="button primary" href="#work">Explore my work <span aria-hidden="true">&rarr;</span></a>
+        <a className="button secondary" href="mailto:seksan.chaina@gmail.com">Email me <span aria-hidden="true">&nearr;</span></a>
       </div>
 
       <div className="hero-stats">
         <div><strong>10+</strong><span>Projects</span></div>
         <div><strong>5</strong><span>Years manufacturing</span></div>
-        <div><strong>4 hr → 10 min</strong><span>Report time target</span></div>
+        <div><strong>4 hr &rarr; 10 min</strong><span>Report time target</span></div>
       </div>
     </section>
   );
