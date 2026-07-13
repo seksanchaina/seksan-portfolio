@@ -1,52 +1,73 @@
 .profile-photo {
-  display: grid;
-  gap: 0.85rem;
   width: 260px;
   margin: 0;
 }
 
-.profile-photo figcaption {
-  width: 100%;
-  padding: 0.8rem 1rem;
-  background: var(--blue);
-  color: #fff;
-  box-shadow: 6px 6px 0 var(--yellow);
-}
-
-.profile-photo figcaption strong,
-.profile-photo figcaption span {
-  display: block;
-}
-
-.profile-photo figcaption strong {
-  font-size: 1.2rem;
-  line-height: 1;
-  letter-spacing: -0.06em;
-}
-
-.profile-photo figcaption span {
-  margin-top: 0.45rem;
-  font-size: 0.65rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #dbeafe;
-}
-
 .hero h1 {
-  max-width: 900px;
-  margin: 0.75rem 0 1.5rem;
-  font-size: clamp(2.7rem, 5.4vw, 5.6rem);
-  line-height: 0.96;
+  max-width: 760px;
+  margin: 0.55rem 0 1.75rem;
+  font-size: clamp(3rem, 5.2vw, 5.35rem);
+  line-height: 0.92;
+}
+
+.hero h1 span,
+.hero h1 em {
+  display: block;
 }
 
 .hero-intro {
   gap: 2.25rem;
+  align-items: center;
+}
+
+.hero-profile-copy {
+  max-width: 520px;
+  padding-left: 1.35rem;
+  border-left: 3px solid var(--yellow);
+}
+
+.profile-name,
+.profile-location {
+  margin: 0;
+}
+
+.profile-name {
+  font-size: clamp(1.65rem, 2.5vw, 2.2rem);
+  font-weight: 900;
+  letter-spacing: -0.06em;
+  color: var(--blue);
+}
+
+.profile-location {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+.hero-profile-copy .hero-copy {
+  margin: 1.15rem 0 0;
+  font-size: 1.05rem;
+}
+
+.hero-actions .button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.hero-actions .secondary {
+  padding: 0.8rem 1.1rem;
+  border: 1px solid var(--blue);
+  color: var(--blue);
 }
 
 @media (max-width: 760px) {
   .hero h1 {
-    margin-bottom: 1.25rem;
-    font-size: clamp(2.45rem, 12vw, 3.35rem);
+    margin-bottom: 1.5rem;
+    font-size: clamp(2.5rem, 12.5vw, 3.3rem);
     line-height: 0.98;
   }
 
@@ -58,11 +79,11 @@
     width: 190px;
   }
 
-  .profile-photo figcaption {
-    padding: 0.6rem 0.75rem;
+  .hero-profile-copy {
+    padding-left: 1rem;
   }
 
-  .profile-photo figcaption strong {
-    font-size: 1.1rem;
+  .hero-profile-copy .hero-copy {
+    font-size: 1rem;
   }
 }

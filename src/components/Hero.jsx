@@ -5,22 +5,25 @@ export default function Hero() {
 
   return (
     <section className="hero" id="home">
-      <p className="eyebrow">Manufacturing data analyst / Power BI developer</p>
-      <h1>Making manufacturing <em>clearer</em>, smarter and more efficient.</h1>
+      <p className="eyebrow">Manufacturing Data Analyst · Power BI Developer</p>
+      <h1><span>Smarter data.</span><em>Stronger production.</em></h1>
+
       <div className="hero-intro">
         <figure className="profile-photo">
           <img src={profilePhoto} alt="Portrait of Seksan Chaina" />
-          <figcaption>
-            <strong>Seksan Chaina</strong>
-            <span>Rayong, Thailand</span>
-          </figcaption>
         </figure>
-        <p className="hero-copy">I am Seksan Chaina, a production professional who combines process improvement, data analysis and dashboard design to turn operational data into action.</p>
+        <div className="hero-profile-copy">
+          <p className="profile-name">Seksan Chaina</p>
+          <p className="profile-location">Rayong, Thailand</p>
+          <p className="hero-copy">I turn process improvement and operational data into Power BI dashboards that help teams act faster.</p>
+        </div>
       </div>
+
       <div className="hero-actions">
-        <a className="button primary" href="#work">View solutions ↓</a>
-        <a className="button text" href="mailto:seksan.chaina@gmail.com">Get in touch ↗</a>
+        <a className="button primary" href="#work">Explore my work <span aria-hidden="true">→</span></a>
+        <a className="button secondary" href="mailto:seksan.chaina@gmail.com">Email me <span aria-hidden="true">↗</span></a>
       </div>
+
       <div className="hero-stats">
         <div><strong>10+</strong><span>Projects</span></div>
         <div><strong>5</strong><span>Years manufacturing</span></div>
