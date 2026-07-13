@@ -3,4 +3,6 @@ export const projects = [
   { id: "energy", number: "02", tone: "lime", tag: "IoT / Sustainability", title: "Electricity Consumption & CO2 Dashboard", summary: "Energy monitoring for consumption, intensity, cost per piece and CO2 emissions.", details: ["IoT energy monitoring", "Monthly trends", "Power BI and Excel"] },
   { id: "tps", number: "03", tone: "pale", tag: "TPS / Kaizen / Jidoka", title: "Manufacturing Process Improvement", summary: "Continuous improvement work that reduces waste and strengthens standardized work.", details: ["Kaizen and Jidoka", "PCS and Yamazumi", "Productivity improvement"] }
 ];
-export const tools = [["/assets/icons/power-bi.svg", "Power BI", "KPI dashboards"], ["/assets/icons/excel.svg", "Excel + VBA", "Automation & reporting"], ["/assets/icons/automation.svg", "Power Automate", "Workflow automation"], ["/assets/icons/power-apps.svg", "Power Apps", "Low-code applications"], [null, "Power Query", "Data transformation"], [null, "Data Modeling", "Database concepts"]];
+const asset = (path) => `${import.meta.env.BASE_URL}assets/icons/${path}`;
+
+export const tools = [[asset("power-bi.svg"), "Power BI", "KPI dashboards"], [asset("excel.svg"), "Excel + VBA", "Automation & reporting"], [asset("automation.svg"), "Power Automate", "Workflow automation"], [asset("power-apps.svg"), "Power Apps", "Low-code applications"], [null, "Power Query", "Data transformation"], [null, "Data Modeling", "Database concepts"]];
