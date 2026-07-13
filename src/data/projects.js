@@ -92,6 +92,6 @@ export const tools = [
   [asset("excel.svg"), "Excel + VBA", "Automation & reporting"],
   [asset("automation.svg"), "Power Automate", "Workflow automation"],
   [asset("power-apps.svg"), "Power Apps", "Low-code applications"],
-  [null, "Power Query", "Data transformation"],
-  [null, "Data Modeling", "Database concepts"]
+  [asset("power-query.svg"), "Power Query", "Data transformation"],
+  [asset("data-modeling.svg"), "Data Modeling", "Database concepts"]
 ];
