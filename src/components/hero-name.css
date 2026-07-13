@@ -1,0 +1,49 @@
+.profile-photo {
+  position: relative;
+  display: block;
+  margin: 0;
+}
+
+.profile-photo figcaption {
+  position: absolute;
+  left: -1.25rem;
+  bottom: 1.1rem;
+  z-index: 1;
+  min-width: 185px;
+  padding: 0.75rem 1rem;
+  background: var(--blue);
+  color: #fff;
+  box-shadow: 7px 7px 0 var(--yellow);
+}
+
+.profile-photo figcaption strong,
+.profile-photo figcaption span {
+  display: block;
+}
+
+.profile-photo figcaption strong {
+  font-size: 1.35rem;
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+}
+
+.profile-photo figcaption span {
+  margin-top: 0.45rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #dbeafe;
+}
+
+@media (max-width: 760px) {
+  .profile-photo figcaption {
+    left: 0.65rem;
+    bottom: 0.65rem;
+    min-width: 145px;
+    padding: 0.6rem 0.75rem;
+  }
+
+  .profile-photo figcaption strong {
+    font-size: 1.1rem;
+  }
+}
