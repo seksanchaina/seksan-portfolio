@@ -1,5 +1,5 @@
 export default function Header({ menuOpen, onMenuToggle }) {
-  const links = [["About", "#about"], ["Work", "#work"], ["Skills", "#skills"], ["Contact", "#contact"]];
+  const links = [["About", "#about"], ["Work", "#work"], ["Dashboard", "#dashboard"], ["Skills", "#skills"], ["Contact", "#contact"]];
 
   return (
     <header className="site-header">

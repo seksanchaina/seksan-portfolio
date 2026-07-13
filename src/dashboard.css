@@ -1,0 +1,13 @@
+.dashboard { background: #fff; }
+.dashboard-heading { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(240px, .75fr); gap: 4vw; align-items: end; margin-bottom: 2.5rem; }
+.dashboard-heading h2 { margin: .7rem 0 0; }
+.dashboard-heading > p { max-width: 390px; margin: 0; color: #52606d; line-height: 1.7; }
+.dashboard-gallery { overflow: hidden; border: 1px solid var(--line); background: var(--surface); box-shadow: 12px 12px 0 var(--yellow); }
+.dashboard-stage { margin: 0; background: #fff; }
+.dashboard-stage img { display: block; width: 100%; height: auto; }
+.dashboard-stage figcaption { padding: .85rem 1rem; background: #fff; color: #475569; font-size: .82rem; font-weight: 800; }
+.dashboard-controls { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border-top: 1px solid var(--line); }
+.dashboard-controls button { min-height: 58px; border: 0; background: #fff; color: #475569; cursor: pointer; font: 800 .78rem Arial, sans-serif; text-align: left; padding: .9rem 1rem; transition: background .2s ease, color .2s ease; }
+.dashboard-controls button:hover, .dashboard-controls button.active { background: var(--blue); color: #fff; }
+.dashboard-note { margin: 1.6rem 0 0; color: #64748b; font-size: .74rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+@media (max-width: 760px) { .dashboard-heading { grid-template-columns: 1fr; gap: 1rem; margin-bottom: 1.75rem; } .dashboard-gallery { box-shadow: 7px 7px 0 var(--yellow); } .dashboard-controls { grid-template-columns: repeat(2, 1fr); } .dashboard-controls button { min-height: 54px; padding: .75rem; font-size: .72rem; } }

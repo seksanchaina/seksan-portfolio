@@ -6,12 +6,21 @@ import ProjectModal from "./components/ProjectModal";
 import Footer from "./components/Footer";
 import { projects, tools } from "./data/projects";
 import "./contact.css";
+import "./dashboard.css";
 import "./project-filters.css";
+
+const dashboardPreviews = [
+  { id: "overview", label: "01 / Overview", title: "Monthly performance overview", image: `${import.meta.env.BASE_URL}assets/dashboards/consumption-dashboard-01.png`, alt: "Electricity Consumption Dashboard overview with consumption, cost, and CO2 metrics" },
+  { id: "machine", label: "02 / Machines", title: "Machine energy performance", image: `${import.meta.env.BASE_URL}assets/dashboards/consumption-dashboard-02.png`, alt: "Electricity Consumption Dashboard with machine performance charts" },
+  { id: "preheat", label: "04 / Preheat", title: "Preheat consumption monitoring", image: `${import.meta.env.BASE_URL}assets/dashboards/consumption-dashboard-04.png`, alt: "Electricity Consumption Dashboard with preheat comparison and monitoring charts" },
+  { id: "daily", label: "05 / Daily detail", title: "Daily consumption analysis", image: `${import.meta.env.BASE_URL}assets/dashboards/consumption-dashboard-05.png`, alt: "Electricity Consumption Dashboard with daily consumption and shift analysis" },
+];
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
   const [activeFilter, setActiveFilter] = useState("All");
+  const [activeDashboard, setActiveDashboard] = useState(dashboardPreviews[0]);
   const projectFilters = ["All", "Dashboards", "Data workflow", "Automation"];
   const filteredProjects = activeFilter === "All" ? projects : projects.filter((project) => project.category === activeFilter);
 
@@ -45,8 +54,38 @@ export default function App() {
           </div>
         </section>
 
+        <section className="dashboard section" id="dashboard">
+          <div className="dashboard-heading">
+            <div>
+              <p className="eyebrow">03 / Dashboard gallery</p>
+              <h2>Electricity consumption, made actionable.</h2>
+            </div>
+            <p>A static case-study preview of the Electricity Consumption Dashboard, created to make energy trends and production performance easier to understand.</p>
+          </div>
+          <div className="dashboard-gallery">
+            <figure className="dashboard-stage">
+              <img src={activeDashboard.image} alt={activeDashboard.alt} />
+              <figcaption>{activeDashboard.title}</figcaption>
+            </figure>
+            <div className="dashboard-controls" aria-label="Select dashboard preview">
+              {dashboardPreviews.map((preview) => (
+                <button
+                  key={preview.id}
+                  type="button"
+                  className={activeDashboard.id === preview.id ? "active" : ""}
+                  onClick={() => setActiveDashboard(preview)}
+                  aria-pressed={activeDashboard.id === preview.id}
+                >
+                  {preview.label}
+                </button>
+              ))}
+            </div>
+          </div>
+          <p className="dashboard-note">Static portfolio preview - no live company data connection.</p>
+        </section>
+
         <section className="section" id="skills">
-          <p className="eyebrow">03 / Capabilities</p>
+          <p className="eyebrow">04 / Capabilities</p>
           <div className="skills-layout">
             <h2>Tools and methods I use to improve performance.</h2>
             <div className="tool-grid">
@@ -61,7 +100,7 @@ export default function App() {
         </section>
 
         <section className="experience section">
-          <p className="eyebrow">04 / Experience</p>
+          <p className="eyebrow">05 / Experience</p>
           <div className="experience-list">
             <article><p>Oct 2024 - Present</p><h3>Production Officer</h3><span>AH BRAKE (Thailand) Co., Ltd. | Rayong</span></article>
             <article><p>Jun 2024 - Sep 2024</p><h3>TPS Officer</h3><span>Maruyasu Industries (Thailand) Co., Ltd. | Rayong</span></article>
@@ -70,7 +109,7 @@ export default function App() {
         </section>
 
         <section className="contact" id="contact">
-          <p className="eyebrow">05 / Contact</p>
+          <p className="eyebrow">06 / Contact</p>
           <h2>Let's improve the next process together.</h2>
           <div className="contact-links">
             <a className="contact-email" href="mailto:seksan.chaina@gmail.com">Email me <span aria-hidden="true">↗</span></a>
