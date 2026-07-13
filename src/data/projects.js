@@ -90,8 +90,8 @@ const asset = (path) => `${import.meta.env.BASE_URL}assets/icons/${path}`;
 export const tools = [
   [asset("power-bi.svg"), "Power BI", "KPI dashboards"],
   [asset("excel.svg"), "Excel + VBA", "Automation & reporting"],
-  [asset("automation.svg"), "Power Automate", "Workflow automation"],
-  [asset("power-apps.svg"), "Power Apps", "Low-code applications"],
+  [asset("power-automate.png"), "Power Automate", "Workflow automation"],
+  [asset("power-apps.png"), "Power Apps", "Low-code applications"],
   [asset("power-query.svg"), "Power Query", "Data transformation"],
   [asset("data-modeling.svg"), "Data Modeling", "Database concepts"]
 ];
