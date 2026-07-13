@@ -8,7 +8,6 @@ export default function Hero() {
       <p className="eyebrow">Manufacturing data analyst / Power BI developer</p>
       <h1>Making manufacturing <em>clearer</em>, smarter and more efficient.</h1>
       <div className="hero-intro">
-        <p className="hero-copy">I am Seksan Chaina, a production professional who combines process improvement, data analysis and dashboard design to turn operational data into action.</p>
         <figure className="profile-photo">
           <img src={profilePhoto} alt="Portrait of Seksan Chaina" />
           <figcaption>
@@ -16,6 +15,7 @@ export default function Hero() {
             <span>Rayong, Thailand</span>
           </figcaption>
         </figure>
+        <p className="hero-copy">I am Seksan Chaina, a production professional who combines process improvement, data analysis and dashboard design to turn operational data into action.</p>
       </div>
       <div className="hero-actions">
         <a className="button primary" href="#work">View solutions ↓</a>
