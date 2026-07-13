@@ -1,0 +1,12 @@
+.case-study-meta { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+.case-study-meta .eyebrow { margin: 0; }
+.case-study-meta span { font-size: .72rem; font-weight: 800; color: #64748b; }
+.case-study-summary { max-width: 48ch; margin: .8rem 0 1.8rem; font-size: 1.06rem; line-height: 1.65; color: #334155; }
+.case-study-grid { display: grid; grid-template-columns: 1fr 1.25fr; gap: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--line); }
+.case-study-grid p, .case-study-grid li { line-height: 1.6; color: #4b5563; }
+.case-study-grid ul { margin: 0; padding-left: 1.1rem; }
+.case-study-label { margin: 0; font-size: .68rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--blue) !important; }
+.case-study-impact { margin-top: 1.5rem; padding: 1rem 1.15rem; background: #fef3a8; }
+.case-study-impact p { margin: 0 0 .25rem; font-size: .68rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #475569; }
+.case-study-impact strong { line-height: 1.35; }
+@media (max-width: 760px) { .case-study-grid { grid-template-columns: 1fr; gap: .75rem; } }

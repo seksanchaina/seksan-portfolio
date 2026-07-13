@@ -1,0 +1,20 @@
+.project-card .project-impact {
+  margin: 0.9rem 0 1rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid currentColor;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.project-card .project-button {
+  transition: transform 160ms ease;
+}
+
+.project-card .project-button:hover {
+  transform: translateX(4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card .project-button { transition: none; }
+}

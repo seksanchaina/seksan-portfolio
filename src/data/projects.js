@@ -1,8 +1,79 @@
 export const projects = [
-  { id: "oee", number: "01", tone: "dark", tag: "Power BI / KPI Monitoring", title: "OEE & Production Performance Dashboard", summary: "Interactive reporting for OEE, productivity, production output and operational KPIs.", details: ["OEE, productivity and output", "Power BI and data modeling", "Faster loss identification"] },
-  { id: "energy", number: "02", tone: "lime", tag: "IoT / Sustainability", title: "Electricity Consumption & CO2 Dashboard", summary: "Energy monitoring for consumption, intensity, cost per piece and CO2 emissions.", details: ["IoT energy monitoring", "Monthly trends", "Power BI and Excel"] },
-  { id: "tps", number: "03", tone: "pale", tag: "TPS / Kaizen / Jidoka", title: "Manufacturing Process Improvement", summary: "Continuous improvement work that reduces waste and strengthens standardized work.", details: ["Kaizen and Jidoka", "PCS and Yamazumi", "Productivity improvement"] }
+  {
+    id: "oee",
+    number: "01",
+    tone: "dark",
+    tag: "Power BI / KPI Monitoring",
+    title: "OEE & Production Performance Dashboard",
+    summary: "One reporting view for OEE, productivity, output and operational KPIs.",
+    challenge: "Give production teams a clear daily view of performance, losses and priorities.",
+    details: ["Defined KPI structure for OEE, output and productivity", "Designed drill-down views for faster loss identification", "Built a Power BI reporting flow for daily decisions"],
+    impact: "Faster visibility of production losses and performance trends."
+  },
+  {
+    id: "energy",
+    number: "02",
+    tone: "lime",
+    tag: "IoT / Sustainability",
+    title: "Electricity Consumption & CO2 Dashboard",
+    summary: "Energy monitoring for consumption, intensity, cost per piece and CO2 emissions.",
+    challenge: "Connect energy data with production context so improvement opportunities are easier to find.",
+    details: ["Organized consumption, intensity and cost-per-piece metrics", "Created monthly trend and comparison views", "Prepared data for Power BI and Excel analysis"],
+    impact: "Clearer energy-use conversations across production and sustainability teams."
+  },
+  {
+    id: "monitoring",
+    number: "03",
+    tone: "pale",
+    tag: "Production Monitoring",
+    title: "Daily Production Monitoring Dashboard",
+    summary: "A practical dashboard for output, plan-versus-actual and line performance.",
+    challenge: "Reduce the effort needed to turn shop-floor updates into a consistent daily report.",
+    details: ["Mapped plan-versus-actual reporting needs", "Standardized daily performance indicators", "Designed a readable dashboard layout for production teams"],
+    impact: "A more consistent view of daily production status."
+  },
+  {
+    id: "etl",
+    number: "04",
+    tone: "pale",
+    tag: "Power Query / Data Pipeline",
+    title: "Power Query ETL Workflow",
+    summary: "Repeatable data preparation for multi-file production reporting.",
+    challenge: "Replace manual copy-and-paste work with a refreshable preparation process.",
+    details: ["Combined source files into a consistent structure", "Applied reusable cleaning and transformation steps", "Prepared reliable datasets for dashboard reporting"],
+    impact: "Less manual preparation before analysis and reporting."
+  },
+  {
+    id: "asakai",
+    number: "05",
+    tone: "dark",
+    tag: "Presentation Automation",
+    title: "Asakai Report Automation",
+    summary: "A streamlined approach to recurring operational presentation updates.",
+    challenge: "Make routine presentation preparation faster while keeping the message consistent.",
+    details: ["Structured recurring report inputs", "Automated repeatable content preparation", "Focused slides on key actions and progress"],
+    impact: "More time for discussion and less time preparing routine updates."
+  },
+  {
+    id: "vba",
+    number: "06",
+    tone: "lime",
+    tag: "Excel VBA / Reporting",
+    title: "Excel VBA Reporting Automation",
+    summary: "Automation for recurring spreadsheets, calculations and report-ready outputs.",
+    challenge: "Reduce repetitive spreadsheet work while preserving clear, controlled reporting.",
+    details: ["Automated repetitive reporting steps", "Standardized calculation and output formats", "Created easier-to-use workflows for report users"],
+    impact: "A more reliable and efficient recurring reporting process."
+  }
 ];
+
 const asset = (path) => `${import.meta.env.BASE_URL}assets/icons/${path}`;
 
-export const tools = [[asset("power-bi.svg"), "Power BI", "KPI dashboards"], [asset("excel.svg"), "Excel + VBA", "Automation & reporting"], [asset("automation.svg"), "Power Automate", "Workflow automation"], [asset("power-apps.svg"), "Power Apps", "Low-code applications"], [null, "Power Query", "Data transformation"], [null, "Data Modeling", "Database concepts"]];
+export const tools = [
+  [asset("power-bi.svg"), "Power BI", "KPI dashboards"],
+  [asset("excel.svg"), "Excel + VBA", "Automation & reporting"],
+  [asset("automation.svg"), "Power Automate", "Workflow automation"],
+  [asset("power-apps.svg"), "Power Apps", "Low-code applications"],
+  [null, "Power Query", "Data transformation"],
+  [null, "Data Modeling", "Database concepts"]
+];
