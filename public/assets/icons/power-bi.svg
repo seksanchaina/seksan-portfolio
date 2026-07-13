@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="10" fill="#F2C811"/><path d="M11 33h6V19h-6v14Zm10 0h6V11h-6v22Zm10 0h6V16h-6v17Z" fill="#1E3A8A"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 342" fill="none">
+  <defs>
+    <linearGradient id="dark" x1="42.6%" x2="57.2%" y1="0%" y2="93.2%"><stop offset="0%" stop-color="#E6AD10"/><stop offset="100%" stop-color="#C87E0E"/></linearGradient>
+    <linearGradient id="mid" x1="40.1%" x2="62%" y1="0%" y2="95.6%"><stop offset="0%" stop-color="#F6D751"/><stop offset="100%" stop-color="#E6AD10"/></linearGradient>
+    <linearGradient id="light" x1="27.8%" x2="55%" y1="0%" y2="96.8%"><stop offset="0%" stop-color="#F9E589"/><stop offset="100%" stop-color="#F6D751"/></linearGradient>
+  </defs>
+  <path fill="url(#dark)" d="M142 14c0-8 7-14 14-14h86c8 0 14 6 14 14v313c0 8-6 14-14 14H14c-8 0-14-6-14-14V185c0-8 6-14 14-14h57v-71c0-8 6-14 14-14h57V14Z"/>
+  <path fill="url(#mid)" d="M185 100v242H71V86h100c8 0 14 6 14 14Z"/>
+  <path fill="url(#light)" d="M0 171v170h114V185c0-8-6-14-14-14H0Z"/>
+</svg>
