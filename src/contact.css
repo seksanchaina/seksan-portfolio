@@ -1,0 +1,7 @@
+.contact h2 { max-width: 780px; margin-bottom: 1.8rem; }
+.contact-links { display: flex; flex-wrap: wrap; gap: .8rem; }
+.contact-email, .contact-github { display: inline-flex; align-items: center; gap: .65rem; font-size: .92rem; font-weight: 800; }
+.contact-email { padding: .9rem 1.1rem; background: var(--blue); border-bottom: 0; color: #fff; }
+.contact-github { padding: .84rem 1.05rem; border: 1px solid var(--blue); color: var(--blue); }
+.contact-note { margin: 1.2rem 0 0; font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #475569; }
+@media (max-width: 760px) { .contact-links { align-items: stretch; flex-direction: column; } .contact-email, .contact-github { justify-content: space-between; } }

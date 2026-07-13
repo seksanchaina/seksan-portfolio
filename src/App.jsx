@@ -5,6 +5,7 @@ import ProjectCard from "./components/ProjectCard";
 import ProjectModal from "./components/ProjectModal";
 import Footer from "./components/Footer";
 import { projects, tools } from "./data/projects";
+import "./contact.css";
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -62,7 +63,11 @@ export default function App() {
         <section className="contact" id="contact">
           <p className="eyebrow">05 / Contact</p>
           <h2>Let's improve the next process together.</h2>
-          <a className="contact-email" href="mailto:seksan.chaina@gmail.com">seksan.chaina@gmail.com ↗</a>
+          <div className="contact-links">
+            <a className="contact-email" href="mailto:seksan.chaina@gmail.com">Email me <span aria-hidden="true">↗</span></a>
+            <a className="contact-github" href="https://github.com/seksanchaina/seksan-portfolio" target="_blank" rel="noreferrer">View source on GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+          <p className="contact-note">Based in Rayong, Thailand</p>
         </section>
       </main>
 
