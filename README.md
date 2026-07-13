@@ -1,21 +1,44 @@
 # Seksan Chaina Portfolio
 
-เว็บไซต์ Portfolio เวอร์ชันแรก สร้างด้วย HTML, CSS และ JavaScript
+Personal portfolio for manufacturing data analysis and Power BI work.
 
-## เปิดดูเว็บไซต์
+Live site: https://seksanchaina.github.io/seksan-portfolio/
 
-เปิดไฟล์ `index.html` ด้วย Live Server ใน VS Code หรือดับเบิลคลิกไฟล์เพื่อเปิดในเบราว์เซอร์
+## Run on your computer
 
-## Deploy ไป GitHub Pages
+Open the `portfolio-website` folder in VS Code, then choose **View > Terminal**.
 
-1. สร้าง repository ใหม่บน GitHub ชื่อ `portfolio-website`
-2. เพิ่ม remote URL ของ repository แล้ว push branch `main`
-3. เปิด GitHub repository → **Settings** → **Pages**
-4. เลือก **GitHub Actions** เป็น Source
-5. ทุกครั้งที่ push ไป branch `main` GitHub จะ build และ deploy เว็บไซต์อัตโนมัติ
+```powershell
+npm.cmd run dev
+```
 
-## แก้ไขข้อมูล
+Open the address shown in Terminal, usually `http://localhost:5173/`.
 
-- เนื้อหา: `index.html`
-- สีและหน้าตา: `style.css`
-- ปุ่มเมนูบนมือถือ: `script.js`
+`npm.cmd` is used because PowerShell may block the standard `npm` script command on this Windows setup.
+
+## Main folders
+
+- `src/components` - Header, Hero, project cards and case-study modal
+- `src/data/projects.js` - Project / solution content
+- `src/styles.css` - Shared visual styles
+- `public/assets` - Profile image and technology icons
+- `.github/workflows/deploy-pages.yml` - GitHub Pages deployment workflow
+
+## Publish an update
+
+After saving code changes, run:
+
+```powershell
+git add .
+git commit -m "Describe your update"
+git push
+```
+
+GitHub Actions builds and publishes the site automatically. Check the **Actions** tab in the GitHub repository if an update does not appear after a few minutes.
+
+## Current capabilities
+
+- Responsive React + Vite portfolio
+- Profile, experience, skills and contact details
+- Six solution cards with case-study detail modal
+- GitHub Pages deployment
