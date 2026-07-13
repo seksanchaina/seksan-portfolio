@@ -11,7 +11,7 @@ export default function Hero() {
         <figure className="profile-photo">
           <img src={profilePhoto} alt="Portrait of Seksan Chaina" />
           <figcaption>
-            <strong>Seksan<br />Chaina</strong>
+            <strong>Seksan Chaina</strong>
             <span>Rayong, Thailand</span>
           </figcaption>
         </figure>
