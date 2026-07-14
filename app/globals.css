@@ -9,7 +9,18 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 }
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; background: #fff; color: var(--ink); }
-::selection { background: var(--yellow); color: var(--ink); }
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--ink);
+}
+::selection {
+  background: var(--yellow);
+  color: var(--ink);
+}
