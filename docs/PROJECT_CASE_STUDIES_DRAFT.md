@@ -74,20 +74,21 @@ For each project, fill in:
 
 ## 03. Gas Consumption Dashboard
 
-**Website status:** Existing project - dashboard screenshots are already prepared.
+**Website status:** Facts and results confirmed in Thai - ready for English conversion after period and public-approval confirmation. Dashboard screenshots are prepared.
 
 | Field | Draft input |
 | --- | --- |
 | Period | [Month/Year - Month/Year] |
 | Scope | [Process / equipment / plant] |
-| Your role | [ ] |
-| Business problem | Gas use needed to be reviewed against output, preheat time, and targets. Confirm the actual issue: [ ] |
-| Baseline | [How was gas consumption monitored before?] |
-| Root cause | [Why actual usage could not be compared consistently with target] |
-| Solution delivered | [Dashboard, target comparison, daily monitoring approach] |
-| Technology | Power BI, Data Modeling, Excel - confirm or edit: [ ] |
-| KPIs | [Gas / 10K pcs, gas cost, preheat time, output, target variance] |
-| Measured impact | [Reduction / faster analysis / earlier issue detection / target achievement] |
+| Your role | [Your role] |
+| Users | Manager and Supervisor |
+| Business problem | การบันทึกข้อมูลใช้ Excel template และสรุปข้อมูลเฉพาะรายเดือน ทำให้ไม่เห็นผลระหว่างเดือน การสรุปรายงานใช้เวลา 2 ชั่วโมง มี 2 กระบวนการที่ใช้พลังงาน Gas ร่วมกันผ่าน Boiler เดียว จึงไม่สามารถระบุได้ว่ากระบวนการใดมีประสิทธิภาพดีหรือควรปรับปรุง ไม่มี Daily Report และมีเพียงเป้าหมายการใช้พลังงานรวมโดยไม่แยกเป้าหมายรายกระบวนการ |
+| Baseline | บันทึกข้อมูลผ่าน Excel template; สรุปรายงานรายเดือน 2 ชั่วโมง; ใช้เป้าหมาย Gas รวมของ Boiler โดยไม่มีเป้าหมายหรือการวัดผลรายกระบวนการ |
+| Root cause | ข้อมูลการใช้ Gas ผลผลิต และเป้าหมายไม่เชื่อมโยงกันในมุมมองเดียว การใช้ Boiler ร่วมกันทำให้แยกเป้าหมายและวิเคราะห์ประสิทธิภาพของแต่ละกระบวนการได้ไม่ชัดเจน |
+| Solution delivered | สร้าง Excel file สำหรับบันทึกข้อมูลรายวันและใช้ VBA ส่งข้อมูลตาม Process เข้าสู่ Data Table กลาง เชื่อมข้อมูลการใช้ Gas ผลผลิต และเป้าหมายผ่าน Power Query และ Data Model สร้าง Daily Report ด้วย Power BI กำหนด Target การใช้ Gas ของแต่ละกระบวนการจากอัตราการใช้พลังงานและลักษณะเครื่องจักร แล้วติดตาม Actual เทียบ Target รายวัน |
+| Technology | Excel, VBA, Power Query, Data Model, Power BI |
+| KPIs | Gas per unit, ต้นทุน Gas ต่อชิ้น, ผลผลิตรายกระบวนการ, ประสิทธิภาพการใช้ Gas รายกระบวนการ, Actual เทียบ Target รายกระบวนการ, Actual เทียบ Target รวมของ Boiler |
+| Measured impact | ลดเวลาสรุปรายงานรายเดือนจาก 2 ชั่วโมงเหลือ 1 นาที (ลดประมาณ 99.2%); Manager และ Supervisor ดู Daily Report ได้ทันที; ระบุปัญหาที่ส่งผลต่อประสิทธิภาพการใช้ Gas ได้รายกระบวนการ; กำหนดและติดตาม Target ของแต่ละกระบวนการได้; เมื่อแต่ละกระบวนการทำ Target ได้ เป้าหมายรวมของ Boiler สามารถบรรลุได้ |
 | Measurement period / source | [ ] |
 | Public-safe evidence | [Overview / Daily usage / Analysis / Targets screenshot captions] |
 | Lesson learned | [ ] |
@@ -95,7 +96,7 @@ For each project, fill in:
 
 **Final one-line impact statement:**
 
-`[Made gas performance visible against ______, helping ______.]`
+`เปลี่ยนการติดตามการใช้ Gas ของ Boiler จากเป้าหมายรวมเป็นการควบคุมรายกระบวนการ ลดเวลาสรุปรายงานจาก 2 ชั่วโมงเหลือ 1 นาที และช่วยให้ทีมระบุปัญหาด้านประสิทธิภาพได้ชัดเจนขึ้น`
 
 ---
 
