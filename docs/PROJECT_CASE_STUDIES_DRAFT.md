@@ -100,49 +100,23 @@ For each project, fill in:
 
 ---
 
-## Shared Data Foundation: Power Query Workflow
+## Shared Data & Automation Foundation
 
-**Website status:** Not a standalone case study. This is the shared data-preparation approach used in Projects 01, 02, and 03.
+**Website status:** Not a standalone case study. This is the shared data and automation approach used in Projects 01, 02, and 03.
 
 | Field | Draft input |
 | --- | --- |
-| Purpose | Prepare, clean, standardize, and connect raw production, energy, IoT, and target data before analysis |
+| Purpose | Prepare, clean, standardize, connect, and automate raw production, energy, IoT, and target data before analysis and reporting |
 | Used in | Project 01: OEE & Production Performance; Project 02: Electricity Consumption & CO2; Project 03: Gas Consumption |
 | Technology | Power Query, Data Model, Excel, VBA, Power BI |
-| Shared workflow | Source files / IoT data -> Power Query transformation -> Data Table and Data Model -> Power BI Daily Report |
-| Value to the portfolio | Shows that the dashboards are based on repeatable data preparation and standardized data rules, not manual report assembly |
-| Website placement | Present as a "How the solutions work" or "Shared data foundation" callout under the three case studies |
+| Shared workflow | Source files / IoT data -> Excel and VBA data entry -> Power Query transformation -> Data Table and Data Model -> Power BI Daily Report |
+| VBA automation capabilities | Submit data to the Data Table by process, refresh reports, export reports, send print commands, and save files automatically |
+| Value to the portfolio | Shows that the dashboards are based on repeatable data preparation, standardized data rules, and report automation rather than manual report assembly |
+| Website placement | Present as a "How the solutions work" or "Shared data and automation foundation" callout under the three case studies |
 
 **Thai summary for later approval:**
 
-`Power Query เป็นส่วนของโครงสร้างข้อมูลร่วมที่ใช้เตรียม ทำความสะอาด และเชื่อมข้อมูลก่อนเข้าสู่ Data Model และ Power BI ของทั้ง 3 Dashboard ไม่ใช่ Case Study แยก`
-
----
-
-## 05. Excel VBA Report Automation
-
-**Website status:** Existing project - needs verified automation scope and result.
-
-| Field | Draft input |
-| --- | --- |
-| Period | [Month/Year - Month/Year] |
-| Scope | [Report / team / number of users] |
-| Your role | [ ] |
-| Business problem | Recurring spreadsheet calculations and report outputs created avoidable manual work. Confirm the actual issue: [ ] |
-| Baseline | [Manual steps; time; frequent calculation/output issue] |
-| Root cause | [Why the routine was manual] |
-| Solution delivered | [Macros, templates, validation, output generation] |
-| Technology | Excel VBA, Power Query, Git - confirm or edit: [ ] |
-| Automation flow | [Input -> calculation -> validation -> report output] |
-| Measured impact | [Time saved; manual steps removed; error reduction; reports per period] |
-| Measurement period / source | [ ] |
-| Public-safe evidence | [Anonymized workbook flow or output example] |
-| Lesson learned | [ ] |
-| Approved for public portfolio? | [Yes / No / Need approval] |
-
-**Final one-line impact statement:**
-
-`[Automated ______ so the team could spend more time on ______.]`
+`Excel, VBA, Power Query, Data Model และ Power BI เป็นโครงสร้างข้อมูลและระบบอัตโนมัติร่วมของทั้ง 3 Dashboard โดย VBA สามารถส่งข้อมูล Refresh, Export Report, สั่งพิมพ์ และบันทึกไฟล์อัตโนมัติ ไม่ใช่ Case Study แยก`
 
 ---
 
