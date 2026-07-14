@@ -109,14 +109,28 @@ For each project, fill in:
 | Purpose | Prepare, clean, standardize, connect, and automate raw production, energy, IoT, and target data before analysis and reporting |
 | Used in | Project 01: OEE & Production Performance; Project 02: Electricity Consumption & CO2; Project 03: Gas Consumption |
 | Technology | Power Query, Data Model, Excel, VBA, Power BI |
-| Shared workflow | Source files / IoT data -> Excel and VBA data entry -> Power Query transformation -> Data Table and Data Model -> Power BI Daily Report |
-| VBA automation capabilities | Submit data to the Data Table by process, refresh reports, export reports, send print commands, and save files automatically |
-| Value to the portfolio | Shows that the dashboards are based on repeatable data preparation, standardized data rules, and report automation rather than manual report assembly |
+| Shared workflow | Source files / IoT data -> Excel and VBA data entry -> validation and confirmation -> Data Table and Data Model -> Power Query transformation -> Power BI Daily Report |
+| VBA automation capabilities | Validate required inputs, check partial data and invalid meter values, confirm before submission, write records to Data Tables by process, clear input after successful submission, and control worksheet protection during data writing |
+| Value to the portfolio | Shows that the dashboards are based on repeatable data preparation, data-quality controls, standardized data rules, and report automation rather than manual report assembly |
 | Website placement | Present as a "How the solutions work" or "Shared data and automation foundation" callout under the three case studies |
 
 **Thai summary for later approval:**
 
-`Excel, VBA, Power Query, Data Model และ Power BI เป็นโครงสร้างข้อมูลและระบบอัตโนมัติร่วมของทั้ง 3 Dashboard โดย VBA สามารถส่งข้อมูล Refresh, Export Report, สั่งพิมพ์ และบันทึกไฟล์อัตโนมัติ ไม่ใช่ Case Study แยก`
+`Excel, VBA, Power Query, Data Model และ Power BI เป็นโครงสร้างข้อมูลและระบบอัตโนมัติร่วมของทั้ง 3 Dashboard โดย VBA ช่วยตรวจสอบและส่งข้อมูลเข้าสู่ Data Table ก่อนนำไปสรุปเป็นรายงาน ไม่ใช่ Case Study แยก`
+
+### Context for Portfolio (Thai - approval draft)
+
+ออกแบบ Manufacturing Reporting Automation Framework บน Excel เพื่อเปลี่ยนข้อมูลหน้างานให้เป็นข้อมูลพร้อมวิเคราะห์ โดยใช้ VBA ควบคุมการบันทึกและตรวจสอบข้อมูล, จัดเก็บข้อมูลแบบแยกตามกระบวนการ, ใช้ Power Query และ Data Model เพื่อเตรียมข้อมูล และแสดงผลผ่าน Daily/Monthly Report และ Power BI Dashboard
+
+ระบบเริ่มจากการทำให้ข้อมูลหน้างานบันทึกได้ง่ายและเชื่อถือได้มากขึ้น ผู้ใช้งานกรอกข้อมูลตาม Process จากนั้น VBA ช่วยตรวจสอบความครบถ้วน ยืนยันก่อนบันทึก และส่งข้อมูลเข้าสู่ Data Table กลาง ทำให้ Manager และ Supervisor ไม่ต้องรอการสรุปแบบ manual จึงเห็นปัญหาและแนวโน้มที่นำไปใช้ตัดสินใจได้เร็วขึ้น
+
+**สิ่งที่ระบบนี้ทำได้จริง**
+
+- ทำให้การบันทึกข้อมูลจากหลาย Process มีรูปแบบมาตรฐานเดียวกัน
+- ตรวจข้อมูลที่จำเป็น ข้อมูลไม่ครบ และค่าผิดปกติก่อนบันทึก
+- เก็บ Product, Defect, เวลา และข้อมูลพลังงานเป็นตารางกลางที่พร้อมวิเคราะห์
+- แยกข้อมูลและติดตามผลราย Process แทนการมองเฉพาะภาพรวม
+- เปลี่ยนข้อมูลหน้างานเป็น Daily และ Monthly Report ที่ใช้ติดตามปัญหาได้ต่อเนื่อง
 
 ---
 
