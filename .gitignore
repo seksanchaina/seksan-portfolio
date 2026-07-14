@@ -12,3 +12,7 @@ node_modules/
 out/
 dist/
 tsconfig.tsbuildinfo
+
+# Private source materials used for local analysis
+docs/source-workbooks/
+docs/source-pbi/
