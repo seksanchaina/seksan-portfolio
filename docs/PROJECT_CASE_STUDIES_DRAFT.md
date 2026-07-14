@@ -57,7 +57,8 @@ For each project, fill in:
 | Baseline | บันทึกข้อมูลผ่าน Excel template; สรุปรายงานรายเดือน 4 ชั่วโมง; เตรียมข้อมูล IoT เพื่อวิเคราะห์ร่วมกับ Production Check Sheet 2 ชั่วโมง; ไม่สามารถเปรียบเทียบประสิทธิภาพและการใช้พลังงานของเครื่องจักรแต่ละเครื่องได้ชัดเจน |
 | Root cause | ข้อมูล IoT และ Production Check Sheet มีโครงสร้างไม่สอดคล้องกันและไม่ได้เชื่อมในระบบเดียวกัน จึงต้องสรุปข้อมูลด้วยมือเป็นรายเดือน |
 | Solution delivered | ออกแบบ Production Check Sheet ใหม่ให้เชื่อมโยงกับข้อมูล IoT ได้ สร้าง Excel file สำหรับบันทึกข้อมูลรายวันและใช้ VBA ส่งข้อมูลตาม Process เข้าสู่ Data Table กลาง ดาวน์โหลดข้อมูล IoT แล้วใช้ Power Query จัดเตรียมข้อมูล จากนั้นใช้ Data Model และ Power BI สร้าง Daily Energy Dashboard และสรุปผลด้วยการ Refresh |
-| Technology | Excel, VBA, Power Query, Data Model, Power BI, IoT data |
+| Technology | Excel, VBA, Power Query, Data Model, Power BI |
+| Data source | IoT data and Production Check Sheet |
 | KPIs | การใช้พลังงานไฟฟ้า, ต้นทุนพลังงานต่อชิ้น, CO2 จากการผลิต, ประสิทธิภาพเครื่องจักร, การใช้พลังงานรายเครื่องจักร, ผลผลิตที่สัมพันธ์กับพลังงาน |
 | Measured impact | ลดเวลาเตรียมข้อมูล IoT จาก 2 ชั่วโมงเหลือ 1 นาที (ลดประมาณ 99.2%); ลดเวลาสรุปรายงานรายเดือนจาก 4 ชั่วโมงเหลือ 1 นาที (ลดประมาณ 99.6%); Manager และ Supervisor ดู Daily Report ได้ทันที; เลือกใช้เครื่องจักรที่มีประสิทธิภาพเหมาะสมได้ต่อเนื่อง; ปริมาณการใช้ไฟฟ้าลดลง 5% |
 | Measurement period / source | เปรียบเทียบช่วงก่อนและหลังใช้งานระบบ / Dashboard |
