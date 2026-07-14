@@ -6,7 +6,7 @@ import { CaseStudy } from "@/components/CaseStudy";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Timeline } from "@/components/Timeline";
-import { projects, skills, timeline } from "@/data/portfolio";
+import { projects, sharedFoundation, skills, timeline } from "@/data/portfolio";
 import Image from "next/image";
 
 const section = "px-5 py-20 sm:py-24 lg:px-8";
@@ -19,16 +19,32 @@ export default function Home() {
         <Hero />
         <section id="about" className={`${section} border-t border-slate-200`}>
           <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-2 lg:gap-20">
-            <SectionHeading eyebrow="01 / About" title="From the shop floor to the dashboard." />
-            <div className="space-y-5 text-lg leading-8 text-slate-600">
-              <p>
-                I work at the intersection of production control, continuous improvement and digital
-                tools.
+            <div>
+              <p className="text-brand text-xs font-extrabold tracking-[0.14em] uppercase">
+                01 / About
               </p>
-              <p>
-                My focus is to make operational information clearer, turn recurring work into
-                reliable workflows, and help teams act on what the data shows.
+              <h2 className="text-ink mt-4 max-w-xl text-4xl font-black tracking-[-0.06em] sm:text-6xl">
+                Good decisions start before the dashboard.
+              </h2>
+            </div>
+            <div className="space-y-6">
+              <p className="max-w-xl text-xl leading-8 text-slate-700">
+                I turn production and energy data into practical reporting systems that make
+                reporting clearer, automation more reliable, and daily decisions faster.
               </p>
+              <div className="grid gap-3 sm:grid-cols-3">
+                {[
+                  ["01", "Capture", "Make daily data entry structured and reliable."],
+                  ["02", "Connect", "Link production, quality and energy information."],
+                  ["03", "Act", "Turn trends into a clear follow-up routine."],
+                ].map(([number, title, description]) => (
+                  <article key={title} className="border-brand border-t-2 pt-3">
+                    <p className="text-brand text-xs font-extrabold tracking-[0.1em]">{number}</p>
+                    <h3 className="mt-2 font-black tracking-[-0.03em]">{title}</h3>
+                    <p className="mt-2 text-sm leading-6 text-slate-600">{description}</p>
+                  </article>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -36,10 +52,9 @@ export default function Home() {
           <div className="mx-auto max-w-7xl">
             <SectionHeading
               eyebrow="02 / Solutions"
-              title="Digital solutions connected to daily manufacturing decisions."
+              title="Selected systems for daily manufacturing decisions."
             >
-              Each solution is structured around the business problem, the working solution, the
-              technology used, and the measurement that matters.
+              A quick view of the problem each system improves and the outcome it delivers.
             </SectionHeading>
             <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
               {projects.map((project) => (
@@ -52,7 +67,7 @@ export default function Home() {
           <div className="mx-auto max-w-7xl">
             <SectionHeading
               eyebrow="03 / Case studies"
-              title="Energy data made visible for action."
+              title="The work behind each reporting improvement."
             >
               Static portfolio previews are used here. They demonstrate dashboard design without a
               live connection to company reporting data.
@@ -63,6 +78,20 @@ export default function Home() {
                 <CaseStudy key={project.id} project={project} />
               ))}
             </div>
+            <aside className="mt-5 border border-slate-200 bg-slate-950 p-6 text-white">
+              <p className="text-xs font-extrabold tracking-[0.12em] text-amber-300 uppercase">
+                Shared foundation
+              </p>
+              <h3 className="mt-2 text-2xl font-black tracking-[-0.05em]">
+                {sharedFoundation.title}
+              </h3>
+              <p className="mt-4 max-w-4xl text-sm leading-6 text-slate-300">
+                {sharedFoundation.description}
+              </p>
+              <p className="mt-4 text-xs font-bold tracking-[0.08em] text-slate-400 uppercase">
+                {sharedFoundation.technology.join(" / ")}
+              </p>
+            </aside>
           </div>
         </section>
         <section id="skills" className={`${section} bg-surface`}>
@@ -97,51 +126,15 @@ export default function Home() {
           <div className="mx-auto max-w-7xl">
             <SectionHeading
               eyebrow="05 / Experience"
-              title="Manufacturing experience grounded in improvement work."
+              title="6+ years in manufacturing, grounded in improvement work."
             />
             <Timeline items={timeline} />
-          </div>
-        </section>
-        <section id="blog" className={`${section} bg-surface`}>
-          <div className="mx-auto max-w-7xl">
-            <SectionHeading eyebrow="06 / Blog" title="Notes from practical digital improvement.">
-              Short field notes on making reporting clearer, automation reliable, and data useful
-              for daily production decisions.
-            </SectionHeading>
-            <article className="max-w-2xl border border-slate-200 bg-white p-6">
-              <p className="text-brand text-xs font-extrabold tracking-[0.12em] uppercase">
-                Coming next
-              </p>
-              <h3 className="mt-3 text-2xl font-black tracking-[-0.05em]">
-                What makes a production dashboard useful on the shop floor?
-              </h3>
-              <p className="mt-4 leading-7 text-slate-600">
-                A practical note on agreed KPI definitions, visible targets, and follow-up routines.
-              </p>
-            </article>
-          </div>
-        </section>
-        <section id="resume" className={`${section} border-t border-slate-200`}>
-          <div className="mx-auto max-w-7xl">
-            <SectionHeading
-              eyebrow="07 / Resume"
-              title="A production-improvement profile, available on request."
-            >
-              The public portfolio stays focused on verified project work. Contact me for a current
-              resume and a fuller employment history.
-            </SectionHeading>
-            <a
-              className="border-brand text-brand inline-flex rounded-full border px-5 py-3 text-sm font-extrabold transition hover:bg-blue-50"
-              href="mailto:seksan.chaina@gmail.com?subject=Resume%20request"
-            >
-              Request resume by email ↗
-            </a>
           </div>
         </section>
         <section id="contact" className={`${section} bg-accent`}>
           <div className="mx-auto max-w-7xl">
             <p className="text-xs font-extrabold tracking-[0.14em] text-slate-700 uppercase">
-              08 / Contact
+              06 / Contact
             </p>
             <h2 className="mt-3 max-w-4xl text-4xl font-black tracking-[-0.06em] sm:text-6xl">
               Let&apos;s improve the next process together.

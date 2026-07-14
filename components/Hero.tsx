@@ -49,10 +49,24 @@ export function Hero() {
             Request resume <span aria-hidden="true">&rarr;</span>
           </Button>
         </div>
-        <div className="mt-14 grid max-w-4xl grid-cols-2 gap-x-8 gap-y-8 sm:grid-cols-4">
-          {kpis.map(([value, label]) => (
-            <KPICard key={label} value={value} label={label} />
-          ))}
+        <div className="mt-14 max-w-5xl">
+          <p className="text-brand text-xs font-extrabold tracking-[0.14em] uppercase">
+            Measured impact
+          </p>
+          <p className="mt-2 text-sm text-slate-600">
+            Selected results from reporting and improvement systems.
+          </p>
+          <div className="mt-5 grid grid-cols-2 gap-x-4 gap-y-4 sm:grid-cols-4">
+            {kpis.map(([title, value, description, icon]) => (
+              <KPICard
+                key={title}
+                title={title}
+                value={value}
+                description={description}
+                icon={icon}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

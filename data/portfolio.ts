@@ -1,16 +1,15 @@
 export type Project = {
   id: string;
-  category: "Dashboard" | "Automation" | "Workflow";
+  category: "Dashboard" | "Automation";
   number: string;
   title: string;
+  teaser: string;
   problem: string;
-  analysis: string;
-  rootCause: string;
   solution: string;
-  architecture: string;
   technology: string[];
+  toolIcons: { src: string; label: string }[];
   measurement: string;
-  lessons: string;
+  users: string;
 };
 
 export type DashboardPreview = {
@@ -28,117 +27,124 @@ export type DashboardProject = {
   previews: DashboardPreview[];
 };
 
+export const sharedFoundation = {
+  title: "Manufacturing Reporting Automation Framework",
+  description:
+    "A shared Excel-based foundation used across the reporting solutions. VBA validates required, incomplete, and invalid entries before writing process-level records to central Data Tables. Power Query and the Data Model then prepare and connect data for Daily/Monthly Reports and Power BI dashboards.",
+  technology: ["Excel", "VBA", "Power Query", "Data Model", "Power BI"],
+};
+
 const asset = (path: string) => `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/assets/${path}`;
 
 export const navigation = [
   ["Solutions", "#solutions"],
   ["Case studies", "#case-studies"],
-  ["Blog", "#blog"],
   ["About", "#about"],
-  ["Resume", "#resume"],
   ["Contact", "#contact"],
 ] as const;
 
 export const kpis = [
-  ["10+", "Solutions"],
-  ["5 years", "Manufacturing"],
-  ["4 hr → 10 min", "Report-time target"],
-  ["3%", "Energy-saving focus"],
+  ["Asakai report preparation", "↓ 83%", "time saved", "clock"],
+  ["Daily data entry", "↓ 80%", "time saved", "capture"],
+  ["Monthly reporting", "Only 1 Click", "from 4–6 hr manual work", "refresh"],
+  ["Electricity usage", "↓ 5%", "reduced through daily tracking", "energy"],
 ] as const;
 
 export const projects: Project[] = [
   {
+    id: "asakai",
+    category: "Automation",
+    number: "01",
+    title: "Asakai Daily Report Automation",
+    teaser: "Daily report preparation reduced from about 30 minutes to about 5 minutes.",
+    problem:
+      "Preparing the daily Asakai presentation required manual data collection and calculations for productivity, plan versus actual, achievement, and daily and accumulated NG.",
+    solution:
+      "Designed a monthly Excel Online template with automated calculations and linked it to a PowerPoint Online template on SharePoint, so report elements update on refresh.",
+    technology: ["Excel Online", "Excel formulas", "SharePoint / OneDrive", "PowerPoint Online"],
+    toolIcons: [
+      { src: asset("icons/excel.png"), label: "Excel Online" },
+      { src: asset("icons/powerpoint.png"), label: "PowerPoint Online" },
+    ],
+    measurement:
+      "Preparation time reduced from about 30 minutes to about 5 minutes per day (about 83%), with a standardized Asakai reporting format.",
+    users: "Members of the Asakai meeting",
+  },
+  {
     id: "oee",
     category: "Dashboard",
-    number: "01",
-    title: "OEE & Production Performance",
+    number: "02",
+    title: "Production Performance & OEE Reporting System",
+    teaser: "Daily data entry reduced from about 2.5 hours to 30 minutes.",
     problem:
-      "Production signals were distributed across manual reports and daily follow-up took too long.",
-    analysis: "Mapped OEE, output, productivity, and loss signals into a consistent review rhythm.",
-    rootCause: "Operational data was fragmented and not structured for fast line-level follow-up.",
+      "Production data was spread across about five files with 7-10 sheets each, requiring about 2 hours 30 minutes of manual entry per day. No daily report existed, and monthly summaries took 4-6 hours.",
     solution:
-      "A KPI view for OEE, productivity, output and loss trends that supports daily decisions.",
-    architecture: "Production data → transformation → KPI model → Power BI decision view.",
-    technology: ["Power BI", "Data modeling", "Excel"],
-    measurement: "Measured through daily OEE, output and productivity visibility.",
-    lessons:
-      "A useful dashboard starts with agreed definitions and a clear daily decision routine.",
+      "Standardized data entry in a five-sheet Excel workbook. VBA validates entries and writes process-level records to central Data Tables, with Power Query and a Data Model feeding a Power BI daily report.",
+    technology: ["Excel", "VBA", "Power Query", "Data Model", "Power BI"],
+    toolIcons: [
+      { src: asset("icons/excel.png"), label: "Excel and VBA" },
+      { src: asset("icons/power-query.svg"), label: "Power Query" },
+      { src: asset("icons/power-bi.svg"), label: "Power BI" },
+    ],
+    measurement:
+      "Daily data entry reduced from about 2.5 hours to 30 minutes; monthly reporting reduced from 4-6 hours to a refresh taking under 1 minute. Enabled daily visibility of OEE, output, productivity, defect rate, defect cost, and downtime.",
+    users: "Managers and Supervisors",
   },
   {
     id: "electricity",
     category: "Dashboard",
-    number: "02",
-    title: "Electricity Consumption & CO2",
-    problem: "Energy consumption, cost per piece and emissions needed production context.",
-    analysis: "Connected energy intensity and cost trends with output and monthly targets.",
-    rootCause: "Energy information was reviewed separately from production drivers.",
+    number: "03",
+    title: "Electricity Consumption & CO2 Dashboard",
+    teaser:
+      "IoT data preparation reduced from about 2 hours to 1 minute; electricity usage reduced 5%.",
+    problem:
+      "Reporting relied on an Excel template summarized only at month-end. Existing IoT data exports and the production check sheet were disconnected, requiring about 2 hours of data preparation and 4 hours for the monthly summary.",
     solution:
-      "A dashboard that connects consumption, intensity, cost and CO2 with operational trends.",
-    architecture: "Energy readings + production output → Power Query → model → Power BI dashboard.",
-    technology: ["Power BI", "Power Query", "Excel"],
-    measurement: "Measured through kWh per 1K pcs, cost per piece and CO2 indicators.",
-    lessons:
-      "Energy improvement discussions become clearer when intensity is reviewed alongside output.",
+      "Redesigned the production check sheet to connect with existing IoT data exports. Excel and VBA capture process data into central Data Tables; Power Query and a Data Model feed a daily Power BI energy dashboard.",
+    technology: ["Excel", "VBA", "Power Query", "Data Model", "Power BI"],
+    toolIcons: [
+      { src: asset("icons/excel.png"), label: "Excel and VBA" },
+      { src: asset("icons/power-query.svg"), label: "Power Query" },
+      { src: asset("icons/power-bi.svg"), label: "Power BI" },
+    ],
+    measurement:
+      "IoT data preparation reduced from about 2 hours to 1 minute; reporting reduced from about 4 hours to 1 minute. Daily tracking supported machine-selection decisions associated with a 5% reduction in electricity usage.",
+    users: "Managers and Supervisors",
   },
   {
     id: "gas",
     category: "Dashboard",
-    number: "03",
-    title: "Gas Consumption Dashboard",
-    problem: "Gas usage needed to be reviewed against output, preheat time and targets.",
-    analysis: "Organized daily consumption, preheat, cost, and output into one operational view.",
-    rootCause: "Gas metrics did not have a shared view for comparing actual usage with targets.",
-    solution:
-      "A practical view of consumption, gas cost, production output and target performance.",
-    architecture: "Gas usage + production records → data model → target comparison dashboard.",
-    technology: ["Power BI", "Data modeling", "Excel"],
-    measurement: "Measured through gas per 10K pcs, usage, cost and output performance.",
-    lessons:
-      "Target comparisons are most actionable when usage and working conditions are visible together.",
-  },
-  {
-    id: "etl",
-    category: "Workflow",
     number: "04",
-    title: "Power Query Reporting Workflow",
-    problem: "Multi-file production reporting relied on repetitive copy-and-paste preparation.",
-    analysis: "Reviewed source-file differences and standardized the common transformation steps.",
-    rootCause:
-      "The reporting flow had no reusable preparation layer between raw files and reports.",
-    solution: "A reusable refresh workflow for cleaning, combining and preparing reporting data.",
-    architecture: "Source files → Power Query transformations → controlled reporting dataset.",
-    technology: ["Power Query", "Excel", "SharePoint"],
-    measurement: "Supports the 4 hr to 10 min report-time target.",
-    lessons:
-      "Reliable automation comes from designing repeatable data rules before building visuals.",
-  },
-  {
-    id: "vba",
-    category: "Automation",
-    number: "05",
-    title: "Excel VBA Report Automation",
-    problem: "Recurring spreadsheet calculations and report outputs created avoidable manual work.",
-    analysis:
-      "Identified repeated calculations, output formats, and review steps suitable for automation.",
-    rootCause: "The routine depended on manual execution of the same spreadsheet sequence.",
-    solution: "Standardized, repeatable automation for calculations and report-ready outputs.",
-    architecture: "Structured workbook → VBA routine → controlled calculation and output steps.",
-    technology: ["Excel VBA", "Power Query", "Git"],
-    measurement: "Measured through fewer manual reporting steps and controlled output formats.",
-    lessons:
-      "Small, well-defined automation can improve reliability before a larger system is needed.",
+    title: "Gas Consumption Dashboard",
+    teaser:
+      "Reporting time reduced from about 2 hours to 1 minute with process-level target tracking.",
+    problem:
+      "Monthly Excel reporting took about 2 hours and provided no daily visibility. Two production processes shared one boiler, making it difficult to identify which process was driving gas usage; only an overall gas target existed.",
+    solution:
+      "Built a daily Excel and VBA data-capture system that connects gas consumption, output, and targets through Power Query and a Data Model. A Power BI report tracks actual versus target by process.",
+    technology: ["Excel", "VBA", "Power Query", "Data Model", "Power BI"],
+    toolIcons: [
+      { src: asset("icons/excel.png"), label: "Excel and VBA" },
+      { src: asset("icons/power-query.svg"), label: "Power Query" },
+      { src: asset("icons/power-bi.svg"), label: "Power BI" },
+    ],
+    measurement:
+      "Reporting time reduced from about 2 hours to 1 minute. Enabled gas-per-unit, gas-cost-per-unit, and actual-versus-target tracking by process for clearer issue identification.",
+    users: "Managers and Supervisors",
   },
 ];
 
 export const timeline = [
-  ["2024 – present", "Production Officer", "AH BRAKE (Thailand) Co., Ltd. · Rayong"],
-  ["2024", "TPS Officer", "Maruyasu Industries (Thailand) Co., Ltd. · Rayong"],
-  ["2022 – 2024", "Production Control Officer", "DENSO TEN (Thailand) Co., Ltd. · Rayong"],
+  ["Oct 2024 - present", "Production Officer", "AH BRAKE (Thailand) Co., Ltd. / Rayong"],
+  ["Jun 2024 - Sep 2024", "TPS Officer", "Maruyasu Industries (Thailand) Co., Ltd. / Rayong"],
+  ["Jun 2022 - Jun 2024", "Production Control Officer", "DENSO TEN (Thailand) Co., Ltd. / Rayong"],
+  ["Oct 2021 - Mar 2022", "Production Supervisor", "Rainbow Printing Co., Ltd. / Bangkok"],
+  ["Jun 2019 - Jul 2021", "Production Supervisor", "Vava Pack Co., Ltd. / Nakhon Ratchasima"],
 ] as const;
 
 export const skills = [
   [asset("icons/power-bi.svg"), "Power BI", "Business dashboards"],
-  [asset("icons/excel.svg"), "Excel + VBA", "Report automation"],
+  [asset("icons/excel.png"), "Excel + VBA", "Report automation"],
   [asset("icons/power-automate.png"), "Power Automate", "Workflow design"],
   [asset("icons/power-apps.png"), "Power Apps", "Low-code applications"],
   [asset("icons/power-query.svg"), "Power Query", "Data transformation"],

@@ -2,18 +2,18 @@ import type { Project } from "@/data/portfolio";
 
 const labels = [
   ["Problem", "problem"],
-  ["Analysis", "analysis"],
-  ["Root cause", "rootCause"],
   ["Solution", "solution"],
-  ["Architecture", "architecture"],
-  ["Technology stack", "technology"],
-  ["Business impact", "measurement"],
-  ["Lessons learned", "lessons"],
+  ["Result", "measurement"],
+  ["Tools", "technology"],
+  ["Users", "users"],
 ] as const;
 
 export function CaseStudy({ project }: { project: Project }) {
   return (
-    <article className="border border-slate-200 bg-white p-6">
+    <article
+      id={`case-study-${project.id}`}
+      className="scroll-mt-28 border border-slate-200 bg-white p-6"
+    >
       <div className="flex items-start justify-between gap-5">
         <div>
           <p className="text-xs font-extrabold tracking-[0.12em] text-slate-500 uppercase">
@@ -32,7 +32,7 @@ export function CaseStudy({ project }: { project: Project }) {
               {label}
             </dt>
             <dd className="mt-2 text-sm leading-6 text-slate-700">
-              {key === "technology" ? project.technology.join(" · ") : project[key]}
+              {key === "technology" ? project.technology.join(" / ") : project[key]}
             </dd>
           </div>
         ))}
