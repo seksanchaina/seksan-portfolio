@@ -100,30 +100,22 @@ For each project, fill in:
 
 ---
 
-## 04. Power Query Reporting Workflow
+## Shared Data Foundation: Power Query Workflow
 
-**Website status:** Existing project - needs verified workflow details and report-time result.
+**Website status:** Not a standalone case study. This is the shared data-preparation approach used in Projects 01, 02, and 03.
 
 | Field | Draft input |
 | --- | --- |
-| Period | [Month/Year - Month/Year] |
-| Scope | [Report name / teams / number of source files] |
-| Your role | [ ] |
-| Business problem | Multi-file reporting relied on repetitive copy-and-paste preparation. Confirm the actual issue: [ ] |
-| Baseline | [Number of files; report preparation time; error/rework frequency] |
-| Root cause | [Why files had different structures or transformations] |
-| Solution delivered | [Import, clean, combine, validation, refresh process] |
-| Technology | Power Query, Excel, SharePoint - confirm or edit: [ ] |
-| Automation flow | [Source -> transformation -> validation -> output] |
-| Measured impact | [Example: preparation time from __ hours to __ minutes; error reduction; refresh frequency] |
-| Measurement period / source | [ ] |
-| Public-safe evidence | [Workflow diagram or anonymized sample] |
-| Lesson learned | [ ] |
-| Approved for public portfolio? | [Yes / No / Need approval] |
+| Purpose | Prepare, clean, standardize, and connect raw production, energy, IoT, and target data before analysis |
+| Used in | Project 01: OEE & Production Performance; Project 02: Electricity Consumption & CO2; Project 03: Gas Consumption |
+| Technology | Power Query, Data Model, Excel, VBA, Power BI |
+| Shared workflow | Source files / IoT data -> Power Query transformation -> Data Table and Data Model -> Power BI Daily Report |
+| Value to the portfolio | Shows that the dashboards are based on repeatable data preparation and standardized data rules, not manual report assembly |
+| Website placement | Present as a "How the solutions work" or "Shared data foundation" callout under the three case studies |
 
-**Final one-line impact statement:**
+**Thai summary for later approval:**
 
-`[Reduced recurring report preparation from ______ to ______ by standardizing ______.]`
+`Power Query เป็นส่วนของโครงสร้างข้อมูลร่วมที่ใช้เตรียม ทำความสะอาด และเชื่อมข้อมูลก่อนเข้าสู่ Data Model และ Power BI ของทั้ง 3 Dashboard ไม่ใช่ Case Study แยก`
 
 ---
 
