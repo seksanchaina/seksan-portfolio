@@ -17,21 +17,21 @@ For each project, fill in:
 
 ## 01. OEE and Production Performance Dashboard
 
-**Website status:** Existing project - needs verified facts and results.
+**Website status:** Facts and results confirmed in Thai - ready for English conversion after period and public-approval confirmation.
 
 | Field | Draft input |
 | --- | --- |
 | Period | [Month/Year - Month/Year] |
 | Production area / process | [Process or line name that is public-safe] |
 | Your role | [Your role] |
-| Users | [Production manager / supervisor / team] |
-| Business problem | Production signals were distributed across manual reports and daily follow-up was slow. Confirm the actual issue: [ ] |
-| Baseline | [Example: report preparation took __ minutes/hours; review happened __ times per day] |
-| Root cause | [Why data was fragmented or difficult to use] |
-| Solution delivered | [Dashboard / automated report / data model details] |
-| Technology | Power BI, Data Modeling, Excel - confirm or edit: [ ] |
-| KPI definitions | [OEE / availability / performance / quality / output / loss definitions] |
-| Measured impact | [Example: report preparation from __ to __; follow-up frequency; decision lead time; loss reduction] |
+| Users | Manager and Supervisor |
+| Business problem | การบันทึกข้อมูลการผลิตเป็นงาน manual กระจายอยู่ประมาณ 5 ไฟล์ ไฟล์ละ 7-10 ชีท และต้องกรอกตาม template หลายจุด ใช้เวลาประมาณ 2 ชั่วโมง 30 นาทีต่อวัน ไม่มี Daily Report สำหรับติดตามผล ปัญหา และแนวโน้มของวันก่อนหน้า การสรุปผลรายเดือนแบบ manual ใช้เวลา 4-6 ชั่วโมงต่อเดือน |
+| Baseline | บันทึกข้อมูลทุก Process: 2 ชั่วโมง 30 นาทีต่อวัน; สรุปรายเดือน: 4-6 ชั่วโมงต่อเดือน; ใช้ประมาณ 5 ไฟล์ ไฟล์ละ 7-10 ชีท |
+| Root cause | ข้อมูลกระจายอยู่หลายไฟล์และหลาย template โดยไม่มี Data Table กลางสำหรับรวมข้อมูลของแต่ละ Process |
+| Solution delivered | ออกแบบ Excel file เสมือนระบบบันทึกข้อมูลขนาดเล็ก รวมการกรอกข้อมูลไว้ใน 1 ไฟล์ 5 ชีท ผู้ใช้กรอกตามวันที่และกดส่งรายงานผ่าน VBA เพื่อบันทึกข้อมูลแยกตาม Process ลง Data Table กลาง จากนั้นสร้าง Daily Report และ Dashboard สำหรับติดตามผล |
+| Technology | Excel, VBA, Power Query, Data Model, Power BI |
+| KPI definitions | OEE, Output, Productivity, Defect Rate, Defect Cost, Down Time |
+| Measured impact | ลดเวลาบันทึกข้อมูลรายวันจาก 2 ชั่วโมง 30 นาทีเหลือ 30 นาที (ลดลง 2 ชั่วโมงต่อวัน หรือ 80%); ลดจำนวนไฟล์จากประมาณ 5 ไฟล์เหลือ 1 ไฟล์ 5 ชีท; ลดเวลาสรุปผลรายเดือนจาก 4-6 ชั่วโมงเหลือไม่ถึง 1 นาทีด้วยการ Refresh; Manager และ Supervisor ดู Daily Report ได้ทันที |
 | Measurement period / source | [Period and source of result] |
 | Public-safe evidence | [Screenshot name and what the viewer should notice] |
 | Lesson learned | [ ] |
@@ -39,7 +39,7 @@ For each project, fill in:
 
 **Final one-line impact statement:**
 
-`[Turned ______ into ______, enabling ______.]`
+`พัฒนาระบบบันทึกข้อมูลและ Daily Performance Dashboard ที่ลดเวลาบันทึกข้อมูลรายวันลง 80% และลดเวลาสรุปผลรายเดือนจาก 4-6 ชั่วโมงเหลือไม่ถึง 1 นาที`
 
 ---
 
