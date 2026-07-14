@@ -17,7 +17,7 @@ The portfolio has moved from the original Vite site to a component-based Next.js
 - Solutions and case-study structure added with business-focused sections: problem, analysis, root cause, solution, technology, measurement, and lessons learned.
 - Electricity and gas dashboard previews added as static portfolio images.
 - Technology icons and Power Platform icons updated.
-- `npm.cmd run lint` and `npx.cmd tsc --noEmit` passed. Local build/development-server test completed.
+- `npm.cmd run lint` and `npx.cmd tsc --noEmit` passed. The development server is running locally; production build needs one final local rerun after the static-export route fix.
 
 ## Sprint status
 
@@ -30,7 +30,7 @@ The portfolio has moved from the original Vite site to a component-based Next.js
 | 4 — Dashboard gallery | 90% | Electricity and gas galleries with page selectors | Confirm final captions and which screenshots are public |
 | 5 — Case studies | 70% | Case-study template and initial content exist | Add verified business metrics, context, and final lessons learned |
 | 6 — Resume & contact | 65% | Email contact and resume-request CTA exist | Approve public resume file or keep request-by-email approach |
-| 7 — Responsive & deploy | 55% | Responsive Tailwind layout and GitHub Pages workflow prepared | Test desktop/mobile, push Next.js commits, verify GitHub Actions deployment |
+| 7 — Responsive & deploy | 55% | Responsive Tailwind layout and GitHub Pages workflow prepared | Run final production build, test desktop/mobile, push Next.js commits, verify GitHub Actions deployment |
 | 8 — Launch | 0% | Not started | Final content approval, QA checklist, public launch |
 
 ## Current Git status
