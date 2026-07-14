@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@import "../styles/tokens.css";
+
+@theme {
+  --color-ink: #111827;
+  --color-brand: #1e3a8a;
+  --color-accent: #f2c811;
+  --color-surface: #f8fafc;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #fff; color: var(--ink); }
+::selection { background: var(--yellow); color: var(--ink); }

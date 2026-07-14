@@ -1,32 +1,47 @@
-# Seksan Chaina Portfolio
+# Seksan Chaina | Manufacturing Digital Portfolio
 
-Personal portfolio for manufacturing data analysis and Power BI work.
+Premium portfolio for production improvement, digitalization, data visibility, and measurable manufacturing impact.
 
 Live site: https://seksanchaina.github.io/seksan-portfolio/
 
-## Run on your computer
+## Sprint 0 stack
 
-Open the `portfolio-website` folder in VS Code, then choose **View > Terminal**.
+- Next.js App Router + TypeScript
+- Tailwind CSS
+- ESLint + Prettier
+- Static export for GitHub Pages
+
+## Project structure
+
+- `app/` - Next.js routes, SEO metadata, and global styles
+- `components/` - reusable UI components
+- `data/` - typed portfolio content
+- `public/` - profile, dashboard, and tool-icon assets
+- `styles/` - global design tokens
+- `docs/` - project specification and roadmap
+
+## Run locally
+
+Install the new Next.js dependencies once, then run the development server:
 
 ```powershell
+npm.cmd install
 npm.cmd run dev
 ```
 
-Open the address shown in Terminal, usually `http://localhost:5173/`.
+Open http://localhost:3000. The current workspace needs this install step because Sprint 0 replaces the older Vite setup.
 
-`npm.cmd` is used because PowerShell may block the standard `npm` script command on this Windows setup.
+## Quality commands
 
-## Main folders
+```powershell
+npm.cmd run lint
+npm.cmd run build
+npm.cmd run format
+```
 
-- `src/components` - Header, Hero, project cards and case-study modal
-- `src/data/projects.js` - Project / solution content
-- `src/styles.css` - Shared visual styles
-- `public/assets` - Profile image and technology icons
-- `.github/workflows/deploy-pages.yml` - GitHub Pages deployment workflow
+## Deploy
 
-## Publish an update
-
-After saving code changes, run:
+Push to `main`. GitHub Actions installs dependencies, creates the static `out/` folder, and deploys it to GitHub Pages.
 
 ```powershell
 git add .
@@ -34,11 +49,6 @@ git commit -m "Describe your update"
 git push
 ```
 
-GitHub Actions builds and publishes the site automatically. Check the **Actions** tab in the GitHub repository if an update does not appear after a few minutes.
+## Content note
 
-## Current capabilities
-
-- Responsive React + Vite portfolio
-- Profile, experience, skills and contact details
-- Six solution cards with case-study detail modal
-- GitHub Pages deployment
+The portfolio uses static dashboard previews. Confirm company approval before publishing images or quantified internal results.

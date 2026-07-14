@@ -1,0 +1,16 @@
+import type { Project } from "@/data/portfolio";
+
+const labels = [
+  ["Problem", "problem"],
+  ["Analysis", "analysis"],
+  ["Root cause", "rootCause"],
+  ["Solution", "solution"],
+  ["Architecture", "architecture"],
+  ["Technology stack", "technology"],
+  ["Business impact", "measurement"],
+  ["Lessons learned", "lessons"],
+] as const;
+
+export function CaseStudy({ project }: { project: Project }) {
+  return <article className="border border-slate-200 bg-white p-6"><div className="flex items-start justify-between gap-5"><div><p className="text-xs font-extrabold uppercase tracking-[0.12em] text-slate-500">Case study {project.number}</p><h3 className="mt-2 text-2xl font-black tracking-[-0.05em]">{project.title}</h3></div><span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-brand">{project.category}</span></div><dl className="mt-7 grid gap-x-8 gap-y-5 md:grid-cols-2">{labels.map(([label, key]) => <div key={key}><dt className="text-xs font-extrabold uppercase tracking-[0.1em] text-slate-500">{label}</dt><dd className="mt-2 text-sm leading-6 text-slate-700">{key === "technology" ? project.technology.join(" · ") : project[key]}</dd></div>)}</dl></article>;
+}
